@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>【优化】使用CSS Module避免样式污染 | 月上秦少</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="./images/avatar.jpg">
+    <link rel="manifest" href="./data/manifest.json">
+    <meta name="description" content="每一个不曾起舞的日子，都是对生命的辜负！">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="keywords" content="vuepress, blog, 前端, HTML5, CSS3，javascript, typescript">
+    <meta name="copyright" content="zkk">
+    <meta name="robots" content="all">
+    <link rel="preload" href="/assets/css/0.styles.808cbb6d.css" as="style"><link rel="preload" href="/assets/js/app.37c3dde3.js" as="script"><link rel="preload" href="/assets/js/4.eeacf8a2.js" as="script"><link rel="preload" href="/assets/js/1.90eac653.js" as="script"><link rel="preload" href="/assets/js/79.3d0500f6.js" as="script"><link rel="preload" href="/assets/js/10.0531f55c.js" as="script"><link rel="prefetch" href="/assets/js/11.2efcb3e0.js"><link rel="prefetch" href="/assets/js/12.d1275a9f.js"><link rel="prefetch" href="/assets/js/13.bd0580d6.js"><link rel="prefetch" href="/assets/js/14.8aa47d89.js"><link rel="prefetch" href="/assets/js/15.fe5a7a0b.js"><link rel="prefetch" href="/assets/js/16.b50cb673.js"><link rel="prefetch" href="/assets/js/17.c1ef64ba.js"><link rel="prefetch" href="/assets/js/18.44b2a747.js"><link rel="prefetch" href="/assets/js/19.6dcb38fe.js"><link rel="prefetch" href="/assets/js/20.c9b11c06.js"><link rel="prefetch" href="/assets/js/21.76b5bf30.js"><link rel="prefetch" href="/assets/js/22.9f4f24d3.js"><link rel="prefetch" href="/assets/js/23.cebb6fc1.js"><link rel="prefetch" href="/assets/js/24.b472c351.js"><link rel="prefetch" href="/assets/js/25.08d85b27.js"><link rel="prefetch" href="/assets/js/26.b0332441.js"><link rel="prefetch" href="/assets/js/27.d2c7c2f8.js"><link rel="prefetch" href="/assets/js/28.9a71c71b.js"><link rel="prefetch" href="/assets/js/29.b59c4030.js"><link rel="prefetch" href="/assets/js/30.26684568.js"><link rel="prefetch" href="/assets/js/31.b15506d7.js"><link rel="prefetch" href="/assets/js/32.25d0584a.js"><link rel="prefetch" href="/assets/js/33.320fb9e9.js"><link rel="prefetch" href="/assets/js/34.588ec66e.js"><link rel="prefetch" href="/assets/js/35.22e913e3.js"><link rel="prefetch" href="/assets/js/36.494feb28.js"><link rel="prefetch" href="/assets/js/37.eeadc64e.js"><link rel="prefetch" href="/assets/js/38.29ed954e.js"><link rel="prefetch" href="/assets/js/39.a5006dbd.js"><link rel="prefetch" href="/assets/js/40.3441ac6b.js"><link rel="prefetch" href="/assets/js/41.1cd0e07c.js"><link rel="prefetch" href="/assets/js/42.0400b953.js"><link rel="prefetch" href="/assets/js/43.beda99f4.js"><link rel="prefetch" href="/assets/js/44.7b5d13ea.js"><link rel="prefetch" href="/assets/js/45.43a382ad.js"><link rel="prefetch" href="/assets/js/46.9d942a5e.js"><link rel="prefetch" href="/assets/js/47.85d8de1a.js"><link rel="prefetch" href="/assets/js/48.530ca110.js"><link rel="prefetch" href="/assets/js/49.4222e7d4.js"><link rel="prefetch" href="/assets/js/5.af2249b8.js"><link rel="prefetch" href="/assets/js/50.bfaad06b.js"><link rel="prefetch" href="/assets/js/51.cab878cc.js"><link rel="prefetch" href="/assets/js/52.0e96161e.js"><link rel="prefetch" href="/assets/js/53.d226128e.js"><link rel="prefetch" href="/assets/js/54.73cae072.js"><link rel="prefetch" href="/assets/js/55.33269819.js"><link rel="prefetch" href="/assets/js/56.1440d914.js"><link rel="prefetch" href="/assets/js/57.dca1d430.js"><link rel="prefetch" href="/assets/js/58.bb35f68d.js"><link rel="prefetch" href="/assets/js/59.ee85d363.js"><link rel="prefetch" href="/assets/js/6.ed9951b5.js"><link rel="prefetch" href="/assets/js/60.6a693ba5.js"><link rel="prefetch" href="/assets/js/61.1712324e.js"><link rel="prefetch" href="/assets/js/62.bae48446.js"><link rel="prefetch" href="/assets/js/63.fba6f9a5.js"><link rel="prefetch" href="/assets/js/64.3c64ac9b.js"><link rel="prefetch" href="/assets/js/65.ac04e7c2.js"><link rel="prefetch" href="/assets/js/66.5efabb75.js"><link rel="prefetch" href="/assets/js/67.bff77e94.js"><link rel="prefetch" href="/assets/js/68.827e0c06.js"><link rel="prefetch" href="/assets/js/69.88fd6cf5.js"><link rel="prefetch" href="/assets/js/7.f1f5dcc5.js"><link rel="prefetch" href="/assets/js/70.6c55fc29.js"><link rel="prefetch" href="/assets/js/71.23b14c9b.js"><link rel="prefetch" href="/assets/js/72.8d17472d.js"><link rel="prefetch" href="/assets/js/73.24c9c490.js"><link rel="prefetch" href="/assets/js/74.2f5088e3.js"><link rel="prefetch" href="/assets/js/75.22b2694b.js"><link rel="prefetch" href="/assets/js/76.040d4a2a.js"><link rel="prefetch" href="/assets/js/77.e9108563.js"><link rel="prefetch" href="/assets/js/78.d50690e7.js"><link rel="prefetch" href="/assets/js/8.2308ed84.js"><link rel="prefetch" href="/assets/js/80.c522a52f.js"><link rel="prefetch" href="/assets/js/81.db63362e.js"><link rel="prefetch" href="/assets/js/82.23fd36e4.js"><link rel="prefetch" href="/assets/js/83.e5c02502.js"><link rel="prefetch" href="/assets/js/84.17ceb6bb.js"><link rel="prefetch" href="/assets/js/85.654af9e3.js"><link rel="prefetch" href="/assets/js/86.f4858bf1.js"><link rel="prefetch" href="/assets/js/87.28dd2193.js"><link rel="prefetch" href="/assets/js/88.22bbd61d.js"><link rel="prefetch" href="/assets/js/89.dc234bfb.js"><link rel="prefetch" href="/assets/js/9.abccc328.js"><link rel="prefetch" href="/assets/js/90.2a64098a.js"><link rel="prefetch" href="/assets/js/91.fc076df9.js"><link rel="prefetch" href="/assets/js/92.c2c68fbc.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.9d5f3455.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.808cbb6d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>月上秦少</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>月上秦少</span>
+            
+          <span data-v-64685f0e>2018 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/avatar.png" alt="月上秦少" class="logo"> <span class="site-name">月上秦少</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/categories/前端/" class="nav-link"><i class="iconfont reco-api"></i>
+  前端
+</a></div><div class="nav-item"><a href="/categories/后端/" class="nav-link"><i class="iconfont reco-coding"></i>
+  后端
+</a></div><div class="nav-item"><a href="/categories/其他/" class="nav-link"><i class="iconfont reco-other"></i>
+  其他
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Git/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  流月
+</a></div> <a href="https://github.com/zkkysqs/blog" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/images/avatar.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    月上秦少
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>63</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>16</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/categories/前端/" class="nav-link"><i class="iconfont reco-api"></i>
+  前端
+</a></div><div class="nav-item"><a href="/categories/后端/" class="nav-link"><i class="iconfont reco-coding"></i>
+  后端
+</a></div><div class="nav-item"><a href="/categories/其他/" class="nav-link"><i class="iconfont reco-other"></i>
+  其他
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Git/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  流月
+</a></div> <a href="https://github.com/zkkysqs/blog" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>【优化】使用CSS Module避免样式污染</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>月上秦少</span>
+            
+          <span data-v-64685f0e>2018 - </span>
+          2020
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>【优化】使用CSS Module避免样式污染</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>月上秦少</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-09-24</span></i> <i class="iconfont reco-eye" data-v-3b7f5bdf><span id="/frontEnd/%E4%BC%98%E5%8C%96/%E4%BD%BF%E7%94%A8CSS%20Module%E9%81%BF%E5%85%8D%E6%A0%B7%E5%BC%8F%E6%B1%A1%E6%9F%93.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-3b7f5bdf><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>React</span><span class="tag-item" data-v-3b7f5bdf>优化</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="使用css-module避免样式污染"><a href="#使用css-module避免样式污染" aria-hidden="true" class="header-anchor">🌙</a> 使用CSS Module避免样式污染</h1> <blockquote><p><strong>背景</strong>：React老项目没有使用<a href="https://zh-hans.reactjs.org/docs/create-a-new-react-app.html#create-react-app" target="_blank" rel="noopener noreferrer">【CRA】<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>创建，使用的自定义的webpack，样式都是采用普通CSS方式，导致很容易造成全局样式污染。</p> <p><strong>需求</strong>：在兼容老页面的基础上，新的页面采用<a href="http://www.ruanyifeng.com/blog/2016/06/css_modules.html" target="_blank" rel="noopener noreferrer">【<strong>css module</strong>】<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>方式避免样式污染。</p></blockquote> <h2 id="_1-react中引入css方式"><a href="#_1-react中引入css方式" aria-hidden="true" class="header-anchor">🌙</a> 1.React中引入CSS方式</h2> <h3 id="_1-1-一般方式"><a href="#_1-1-一般方式" aria-hidden="true" class="header-anchor">🌙</a> 1.1 一般方式</h3> <p><code>APP.tsx</code>:</p> <div class="language-tsx extra-class"><div class="highlight-lines"><br><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-tsx"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./App.scss'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p><code>App.scss</code>:</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.container </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_1-2-使用css-module"><a href="#_1-2-使用css-module" aria-hidden="true" class="header-anchor">🌙</a> 1.2 使用CSS Module</h3> <p><code>APP.tsx</code>:</p> <div class="language-tsx extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-tsx"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token comment">// 导入CSS Module定义的CSS对象</span>
+<span class="token keyword">import</span> styles <span class="token keyword">from</span> <span class="token string">'./App.module.scss'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">{</span><span class="token comment">/*使用CSS Module属性*/</span><span class="token punctuation">}</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><p><code>App.module.scss</code>:</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.container </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>编译后显示：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>container--1g20Q<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>上面代码中，我们将样式文件<code>App.module.scss</code>输入到<code>style</code>对象，然后当做变量的方式引用<code>style.container</code>作为<code>class</code>类名。</p> <h2 id="_2-css-module原理"><a href="#_2-css-module原理" aria-hidden="true" class="header-anchor">🌙</a> 2.CSS Module原理</h2> <p>CSS Module配置极其简单，其原理简单：通过将CSS文件以模块的形式引入（类似于js中的对象），将CSS</p> <p>中定义的类名当作变量赋值给jsx即可。</p> <p>当webpack解析时，会将CSS Module的类名计算或拼接一个唯一的hash值，从而避免样式的污染。</p> <h2 id="_3-配置webpack"><a href="#_3-配置webpack" aria-hidden="true" class="header-anchor">🌙</a> 3.配置webpack</h2> <blockquote><p><a href="https://docs.zkkysqs.top/other/webpack/Webpack%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E5%9F%BA%E7%A1%80%E5%BA%94%E7%94%A8.html#_2-2-%E8%A7%A3%E6%9E%90less%E6%88%96sass" target="_blank" rel="noopener noreferrer">webpack解析less或sass<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://juejin.im/post/6844904017802297352" target="_blank" rel="noopener noreferrer">【Webpack4】CSS 配置之 postcss-loader<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p><code>webpack.config.js</code>：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> cssLoaders <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&quot;style-loader&quot;</span><span class="token punctuation">,</span> 
+  <span class="token string">&quot;css-loader&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> 
+      <span class="token string">&quot;postcss-loader&quot;</span><span class="token punctuation">,</span>
+      options<span class="token operator">:</span> <span class="token punctuation">[</span> 
+          <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'autoprefixer'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;sass-loader&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// CSS Module</span>
+<span class="token keyword">const</span> cssModuleLoaders <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&quot;style-loader&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    loader<span class="token operator">:</span> <span class="token string">&quot;css-loader&quot;</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">{</span>
+      modules<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// class命名规则</span>
+        <span class="token comment">/**
+         * localIdentName格式说明
+         * path: 路径
+         * name: css文件名
+         * local: 类名
+         * hash: 16位字符串
+         '[path][name]__[local]--[hash:base64:5]'
+         .src-styles-main__world-grid--R7u-K
+         ---------------  ----------  -----
+         path,name     local      hash
+         * */</span>
+        mode<span class="token operator">:</span> <span class="token string">&quot;local&quot;</span><span class="token punctuation">,</span>
+        localIdentName<span class="token operator">:</span> <span class="token string">&quot;[name]__[local]--[hash:base64:5]&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;postcss-loader&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;sass-loader&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token operator">:</span> <span class="token string">'./src/index.tsx'</span><span class="token punctuation">,</span>
+  mode<span class="token operator">:</span> devMode <span class="token operator">?</span> <span class="token string">'development'</span> <span class="token operator">:</span> <span class="token string">'production'</span><span class="token punctuation">,</span>
+  devtool<span class="token operator">:</span> devMode <span class="token operator">?</span> <span class="token string">'cheap-source-map'</span> <span class="token operator">:</span> <span class="token string">'hidden-source-map'</span><span class="token punctuation">,</span>
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 开发模式不用hash</span>
+    filename<span class="token operator">:</span> devMode <span class="token operator">?</span> <span class="token string">'js/[name].js'</span> <span class="token operator">:</span> <span class="token string">'js/[name].[chunkhash:8].js'</span><span class="token punctuation">,</span>
+    path<span class="token operator">:</span> config<span class="token punctuation">.</span>output<span class="token punctuation">,</span>
+    publicPath<span class="token operator">:</span> config<span class="token punctuation">.</span>publicPath
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  resolve<span class="token operator">:</span> <span class="token punctuation">{</span>
+    extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'.ts'</span><span class="token punctuation">,</span> <span class="token string">'.tsx'</span><span class="token punctuation">,</span> <span class="token string">'.js'</span><span class="token punctuation">,</span> <span class="token string">'.jsx'</span><span class="token punctuation">,</span> <span class="token string">'.json'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    alias<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'@'</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'src'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token operator">:</span> <span class="token punctuation">{</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token comment">// 支持 sass</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.module\.(scss|sass)$/</span><span class="token punctuation">,</span> use<span class="token operator">:</span> cssModuleLoaders<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment">// 普通方式，不使用css module</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.scss$/</span><span class="token punctuation">,</span> exclude<span class="token operator">:</span> <span class="token regex">/\.module\.(scss|sass)$/</span><span class="token punctuation">,</span> use<span class="token operator">:</span> cssLoaders<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>  
+      <span class="token comment">// 支持 css</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span> use<span class="token operator">:</span> cssLoaders<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Loaders解析顺序是从后向前，解析顺序：</p> <ul><li><code>sass-loader</code>：解析<code>sass|scss</code>为css。</li> <li><code>postcss-loader</code>：添加浏览器前缀，压缩 CSS等。</li> <li><code>css-loader</code>：用于加载<code>css</code>文件，并且转换成<code>commonjs</code>对象。</li> <li><code>style-loader</code>：将样式通过<code>&lt;style&gt;</code>标签插入到head中。</li></ul> <p>注意：<code>{test: /\.scss$/, exclude: /\.module\.(scss|sass)$/, use: cssLoaders}</code>，（注意顺序，放在后面）由于之前的老页面使用了普通的方式，我们还得保持原来的方式可用，这里进行了剔除。</p> <h2 id="_3-解析ts报错"><a href="#_3-解析ts报错" aria-hidden="true" class="header-anchor">🌙</a> 3.解析ts报错</h2> <p>配置完上述步骤，如果不出意料的话，会爆出<code>TS2307: Cannot find module './index.module.scss'.</code>的错误：</p> <p>在项目中增加<code>css.module.d.ts</code>声名：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">&quot;*.module.css&quot;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> classes<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span>key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> classes<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">&quot;*.module.scss&quot;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> classes<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span>key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> classes<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">&quot;*.module.sass&quot;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> classes<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span>key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> classes<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">&quot;*.module.less&quot;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> classes<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span>key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> classes<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="_4-cra使用css-module"><a href="#_4-cra使用css-module" aria-hidden="true" class="header-anchor">🌙</a> 4.CRA使用CSS Module</h2> <blockquote><p><a href="https://www.html.cn/create-react-app/docs/adding-a-css-modules-stylesheet/" target="_blank" rel="noopener noreferrer">添加 CSS Modules 样式表<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h2 id="_5-踩坑记录"><a href="#_5-踩坑记录" aria-hidden="true" class="header-anchor">🌙</a> 5.踩坑记录</h2> <p>由于项目管理不规范，之前新入职的同学，不熟悉项目，随意命名，比如：使用普通的css方式引入时，有一个文件被命名为<code>a.module.scss</code>，然后在<code>tsx</code>文件里面使用<code>impoort './a.module.scss'</code>。</p> <p>在未使用css module之前是正常的，但是引入css module之后发现style没有加载出来，这时就需要去一一排查了，然后把文件命名为<code>a.scss</code>即可。</p> <p>不过，一般这种很少出现吧。</p></div> <footer class="page-edit" style="display:none;"><div class="edit-link"><a href="https://github.com/zkkysqs/blog/edit/master/docs/frontEnd/优化/使用CSS Module避免样式污染.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">2020-9-26 10:06:01</span></div></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----><div class="vuepress-canvas-ribbon-element"></div></div></div>
+    <script src="/assets/js/app.37c3dde3.js" defer></script><script src="/assets/js/4.eeacf8a2.js" defer></script><script src="/assets/js/1.90eac653.js" defer></script><script src="/assets/js/79.3d0500f6.js" defer></script><script src="/assets/js/10.0531f55c.js" defer></script>
+  </body>
+</html>
